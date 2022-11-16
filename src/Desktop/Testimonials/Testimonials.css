@@ -1,0 +1,134 @@
+.testimonials{
+    margin-top: 4rem;
+    background-image: url(../../Assets/thanks.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3rem;
+}
+
+.testimonials-items .courasel-item{
+    height: max-content;
+}
+
+.testimonial-title{
+    color: #000;
+    font-size: 28px;
+    font-style: italic;
+    margin: 0 0 0.2rem;
+    text-align: center;
+}
+
+.testimonial-text{
+    font-size: 16px;
+    text-align: center;
+    width: fit-content;
+    margin: auto;
+    padding: 0 0.5rem;
+}
+
+.testimonials-items{
+    width: 55%;
+    margin: auto;
+    overflow-x: hidden;
+    position: relative;
+    padding: 1rem 0;
+}
+
+.testimonial-item{
+    width: 99%;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem 0;
+    border-radius: 5px;
+}
+
+.testimonial-item::before{
+    content: "";
+    width: 95%;
+    margin-left: 2.5%;
+    height: 1rem;
+    position: absolute;
+    display: block;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 60%, transparent);
+    top: -0.7rem;
+    border-radius: 5px;
+}
+
+.testimonial-item::after{
+    content: "";
+    width: 95%;
+    height: 1rem;
+    position: absolute;
+    display: block;
+    margin-left: 2.5%;
+    background-image: linear-gradient(to top, rgba(255, 255, 255, 0.9) 60%, transparent);
+    bottom: -0.7rem;
+    border-radius: 5px;
+}
+
+.quotation{
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+}
+
+.quotation img{
+    height: 60px;
+}
+
+.person-info{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.person-text{
+    white-space: initial;
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 12px;
+    padding: 0 0.5rem;
+    width: 85%;
+    margin: auto;
+}
+
+.person-name{
+    color: #387801;
+    font-size: 16px;
+}
+
+.person-post{
+    font-size: 15px;
+}
+
+.info-img img{
+    height: 40px;
+    border: 50%;
+}
+
+@media screen and (max-width: 768px){
+    .testimonials{
+        padding: 1.5rem 0.2rem;
+    }
+
+    .testimonials-items{
+        width: 100%;
+    }
+
+    .testimonial-item::before, .testimonial-item::after{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .testimonials-items{
+        width: 85%;
+        margin: auto;
+    }
+
+    .testimonial-item::before, .testimonial-item::after{
+        width: 95%;
+        margin-left: 2.5%;
+    }
+}

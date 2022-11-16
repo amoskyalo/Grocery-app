@@ -1,0 +1,112 @@
+.single{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 75%;
+    margin: 3rem auto 0;
+    display: flex;
+    padding: 1rem 0;
+    border-radius: 2px;
+}
+
+.single-image{
+    max-width: 45%;
+    min-width: 45%;
+    padding-left: 0.5rem;
+}
+
+.single-image img{
+    width: 100%;
+}
+
+.share{
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.5rem;
+}
+
+.share h2{
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+}
+
+.share-icon{
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.share-icon:hover{
+    color: #89c74a;
+}
+
+.descriptions{
+    padding: 0 0.5rem;
+}
+
+.descriptions h2{
+    text-transform: capitalize;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.desc-ratings{
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #89c74a;
+    margin-bottom: 0.5rem;
+}
+
+.delivery{
+    border: 1px solid;
+    background-color: #89c74a;
+    font-size: 12px;
+    color: #ffff;
+    width: max-content;
+    padding: 1px;
+    border-radius: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.single-price{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0.2rem;
+}
+
+.save{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.save p{
+    font-weight: 600;
+    font-style: italic;
+    text-decoration: line-through;
+}
+
+.save span{
+    background-color: #89c74a;
+    color: #fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    padding:  0 2px;
+    border-radius: 3px;
+}
+
+.cart-button{
+    width: 100%;
+    margin: 1rem 0;
+    padding: 8px 0;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #89c74a;
+}
+
+.single-info{
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0.5rem 0;
+}
+
+.single-info p{
+    font-size: 13px;
+    margin-top: 0.5rem;
+}

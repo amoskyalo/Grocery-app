@@ -1,0 +1,86 @@
+.inner-contents, .inner-content{
+    border: 5px solid #89c74a;
+    text-align: center;
+    position: relative;
+    padding: 1rem;
+    border-radius: 2px;
+}
+
+.inner-content{
+    margin-right: -50%;
+}
+
+.home-courasel{
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+.title{
+    color: inherit;
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.desc{
+    color: red;
+    font-size: 49px;
+    font-weight: 900;
+    font-style: italic;
+    margin: 0.5rem 0
+}
+
+.ingridients{
+    font-size: 18px;
+}
+
+.percentage{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.inner-contents button, .inner-content button{
+    padding: 8px 20px;
+    background-color: #fff;
+    border-radius: 16px;
+    margin-top: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.inner-content button{
+    background-color: red;
+    color: #fff;
+}
+
+.inner-contents button:hover{
+    color: #fff;
+    background-color: red;
+}
+
+
+@media(max-width: 768px){
+    .home-courasel{
+        margin-top: 0;
+        height: 400px;
+    }
+
+    .inner-content{
+        margin: 0;
+    }
+
+    .desc{
+        font-size: 20px;
+    }
+
+    .ingridients{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .home-courasel{
+        margin-top: 0;
+    }
+}

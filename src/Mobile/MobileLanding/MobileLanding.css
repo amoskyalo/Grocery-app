@@ -1,0 +1,31 @@
+.landing{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.landing p{
+    font-size: 40px;
+    text-align: center;
+    color: #10a957;
+    font-weight: 900;
+    font-style: italic;
+}
+
+.landing button{
+    width: 75%;
+    padding: 0.7rem 0rem;
+    background-color: #10a957;
+    border-radius: 5px;
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+@media(min-width: 768px){
+    .landing button{
+        padding: 1rem 0;
+    }
+}

@@ -1,0 +1,54 @@
+.courasel{
+    overflow: none;
+    position: relative;  
+}
+
+.inner{
+    white-space: nowrap;
+    transition: all 1s ease-in-out;
+}
+
+.courasel-item{
+    display: inline-flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+}
+
+.arrows{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+}
+
+.arrows *{
+    position: absolute;
+    font-size: 32px;
+    background-color: #89c74a;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 8px;
+}
+
+.arrows *:hover{
+    background-color: orangered;
+    transition: 0.5s ease-in-out;
+}
+.arrows .right{
+    right: 1%;
+}
+
+.arrows .left{
+    left: 1%;
+}
+
+
+@media(max-width: 768px){
+    .courasel-item{
+        height: 50vh;
+    }
+}

@@ -1,0 +1,125 @@
+nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    position: relative;
+}
+
+.nav-bar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.sticky{
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 75%;
+    z-index: 99;
+}
+.nav-logo img{
+    max-height: 75px;
+    min-height: 75px;
+}
+
+.nav-links{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-weight: 700;
+}
+
+.nav-link:hover{
+    color: #89c74a;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link a{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.accounts{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 28px;
+    color: #89c74a;
+}
+
+.cart{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    color: #89c74a;
+    cursor: pointer;
+}
+
+.cart .cart-num{
+    font-size: 12px;
+    position: absolute;
+    top: -20%;
+    right: -20%;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 50%;
+    height: 1rem;
+    width:  1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+}
+
+.sub-nav-bar{
+    width: 50%;
+    margin: auto;
+    display: flex;
+}
+
+.sub-nav-bar .categories{
+    padding: 0.2rem 2rem 0.2rem 1rem;
+    border: 1px solid rgb(171, 167, 167);
+    border-radius: 16px 0 0 16px;
+}
+
+.sub-nav-bar .categories .selection{
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.sub-nav-bar .categories .selection option{
+    color: inherit;
+    transition: 0.5s ease-in-out;
+}
+
+.sub-nav-bar .categories .selection option:hover{
+    color: #ffff;
+    background-color: orangered;
+}
+
+.sub-nav-bar .search{
+    flex: 1;
+    padding: 0.2rem 0 0.2rem 0.5rem;
+    display: flex;
+    border: 1px solid rgb(171, 167, 167);
+    align-items: center;
+    border-radius: 0 16px 16px 0;
+}
+
+.search input{
+    flex: 0.9;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.search .search-icon{
+    flex: 0.1;
+    font-size: 24px;
+    color: #89c74a;
+}

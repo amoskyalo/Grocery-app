@@ -1,0 +1,151 @@
+.footer{
+    background-image: url('../../Assets/footer-image.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 5rem;
+    color: #ffff;
+    position: relative;
+}
+
+.footer-color{
+    background-color: rgba(0, 0, 0, 0.6);
+    height: 100%;
+    width: 100%;
+    padding: 4rem 0 0.5rem;
+}
+
+.footer-links{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-link p{
+    font-size: 14px;
+}
+
+.footer-logo img{
+    height: 70px;
+}
+
+.adress{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.adress p{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.adress p:nth-child(1){
+    align-items: initial;
+}
+
+.search-links{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.search-links h2{
+    font-size: 18px;
+    font-style: italic;
+}
+
+.search-links p::before{
+    content: " > ";
+    display: block;
+    position: relative;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.search-links p{
+    display: flex;
+    gap: 0.2rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.dividers{
+    border-bottom: 2px solid #333;
+    width: 95%;
+    margin: 1rem auto 0;
+}
+
+.footer-end{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem;
+    margin-top: 1.5rem;
+}
+
+.payments{
+    display: flex;
+    gap: 0.2rem;
+}
+
+.payment img{
+    height: 20px;
+    cursor: pointer;
+}
+
+.copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 12px;
+}
+
+.policies{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    top: -40px;
+    left: 15%;
+    width: 70%;
+    background-color: #a2ce4e;
+    padding: 1rem 0;
+    border-radius: 5px;
+}
+
+.policy{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.policy:first-of-type .policy-image{
+    transform: rotateY(180deg);
+}
+
+.policy-image{
+    background-color: #fff;
+    color: #a2ce4e;
+    height: 40px;
+    width:  40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.policy:hover .policy-image{
+    color: #ffff;
+    background-color: orangered;
+    transition: all 0.5s ease-in-out;
+}
+.policy-description h3{
+    font-size: 15px;
+    font-style: italic;
+}
+
+.policy-description p{
+    font-size: 12px;
+    margin-top: 0.1rem;
+}

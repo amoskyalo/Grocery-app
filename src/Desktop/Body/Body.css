@@ -1,0 +1,48 @@
+.body{
+    text-align: center;
+}
+
+.body .title{
+    color: #387801;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 900;
+}
+
+.search-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.search-buttons .fruits{
+    background-color: #96d458;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    height: 60px;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-buttons .fruits img{
+    height: 30px;
+}
+
+@media(max-width: 768px){
+    .body .title{
+        font-size: 30px;
+    }
+
+    .search-buttons{
+        margin-top: 1rem;
+    }
+
+    .search-buttons .fruits{
+        height: 45px;
+        width: 45px;
+    }
+}
