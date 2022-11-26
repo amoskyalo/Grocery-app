@@ -2,13 +2,14 @@ import { useEffect, useState } from 'react'
 import axios from 'axios';
 import { AiTwotoneStar } from 'react-icons/ai'
 import { Link } from 'react-router-dom';
+import { useCart } from 'react-use-cart';
 
 const Vegetables = () => {
     const [vegetables, setVegetables] = useState([]);
     
     const getVegetables = async() =>{
         const req = await axios.get("https://groceryamoh.herokuapp.com/api/product/all?category=vegetables");
-        const finalProducts = req.data.items.map(finalProduct =>{
+        const finalProducts = req.data.products.map(finalProduct =>{
             const likes = Math.floor((Math.random() * 100));
             return {...finalProduct, likes}
         });
@@ -19,6 +20,7 @@ const Vegetables = () => {
         getVegetables();
     }, []);
 
+    const { addItem } = useCart();
   return (
         vegetables.map((vegetable, i) =>
             <Link to={`/shop-products/${vegetable._id}`} className="display" key={i}>
@@ -31,7 +33,7 @@ const Vegetables = () => {
                     <p className="display-price">Kshs.{vegetable.price}</p>
                 </div>
                 <div className="carts">
-                    <button className="carts-btn">Add to Cart</button>
+                    <button className="carts-btn" onClick={() => addItem(vegetable)}>Add to Cart</button>
                 </div>
             </Link>
         )

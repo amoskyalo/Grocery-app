@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
             <div className="dividers"></div>
             <div className="footer-end">
-              <p className="copyright"><AiOutlineCopyrightCircle />Groga company</p>
+              <p className="copyright"><AiOutlineCopyrightCircle />Amos's company</p>
               <div className="payments">
                 <Payments />
               </div>

@@ -3,6 +3,7 @@ import './SingleProduct.css'
 import { AiFillTwitterCircle, AiTwotoneStar } from 'react-icons/ai'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { useCart } from 'react-use-cart'
 
 const SingleProduct = () => {
     const [singleFruit, setSingleFruit] = useState([]);
@@ -14,15 +15,16 @@ const SingleProduct = () => {
                     const likes = Math.floor(Math.random() * 100);
                     const discount = Math.floor(Math.random() * (res.data.price / 2));
                     const percentageDiscount = Math.floor((discount/ res.data.price) * 100);
-                    const initialPrice = res.data.price + discount
-                    console.log(initialPrice)
-                    setSingleFruit({...res.data, likes, percentageDiscount, initialPrice});
+                    const initialPrice = res.data.price + discount;
+                    setSingleFruit({...res.data, likes, percentageDiscount, initialPrice, id});
                 } catch (error) {
                 console.log(error); 
                 }
             };
             getProducts();
         },[id]);
+
+        const { addItem } = useCart();
   return (
         <div className='single'>
             <div className="single-image">
@@ -44,7 +46,7 @@ const SingleProduct = () => {
                     <p>Ksh.{singleFruit.initialPrice}</p>
                     <span>- {singleFruit.percentageDiscount} %</span>
                 </div>
-                <button className='cart-button'>ADD TO CART</button>  
+                <button className='cart-button' onClick={() => addItem(singleFruit)}>ADD TO CART</button>  
                 <div className="single-info">
                     <h3>Description</h3>
                     <p>{singleFruit.description}</p>  

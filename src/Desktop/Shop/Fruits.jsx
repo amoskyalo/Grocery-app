@@ -7,16 +7,12 @@ const Fruits = () => {
     const [fruits, setFruits] = useState([]);
 
     const getFruits = async() =>{
-        try {
-            const req = await axios.get("https://groceryamoh.herokuapp.com/api/product/all?category=fruits");
-            const allFruits = req.data.items.map((allFruit) =>{
-                const likes = Math.floor(Math.random() * 100);
-                return {...allFruit, likes}
-            });
-            setFruits(allFruits);
-        } catch (error) {
-            console.log(error);
-        }
+        const req = await axios.get("https://groceryamoh.herokuapp.com/api/product/all?category=fruits");
+        const finalProducts = req.data.products.map(finalProduct =>{
+            const likes = Math.floor((Math.random() * 100));
+            return {...finalProduct, likes}
+        });
+        setFruits(finalProducts);
     };
 
     useEffect(()=>{
@@ -32,7 +28,7 @@ const Fruits = () => {
             </div>
             <div className="display-desc">
                 <h3 className="display-title" style={{textTransform: "capitalize"}}>{fruit.title}</h3>
-                <p className="display-stars"><AiTwotoneStar /><AiTwotoneStar /><AiTwotoneStar /><AiTwotoneStar /><AiTwotoneStar />({fruit.likes})</p>
+                <p className="display-stars"><AiTwotoneStar /><AiTwotoneStar /><AiTwotoneStar /><AiTwotoneStar /><AiTwotoneStar />0</p>
                 <p className="display-price">Kshs.{fruit.price}</p>
             </div>
             <div className="carts">

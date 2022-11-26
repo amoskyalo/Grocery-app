@@ -19,7 +19,8 @@ const Product = () => {
             console.log(error);
         }
     };
-
+    console.log(products);
+    
     useEffect(()=>{
         getProducts();
     }, []);

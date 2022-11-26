@@ -3,6 +3,7 @@ import './Nav.css'
 import { MdOutlineAccountCircle, MdOutlineShoppingCart, MdOutlineSearch } from 'react-icons/md'
 import groceryLogo from '../../Assets/grocery-logo.png'
 import { Link } from 'react-router-dom'
+import { useCart } from 'react-use-cart'
 
 const Nav = () => {
   const [sticky, setSticky] = useState("");
@@ -13,6 +14,7 @@ const Nav = () => {
 		} else setSticky("");
 	});
 
+  const{ items } = useCart();
 
   return (
     <nav className="nav">
@@ -35,14 +37,14 @@ const Nav = () => {
               <div className="account">
                 <MdOutlineAccountCircle />
               </div>
-              <div className="cart">
+              <Link className="cart" to="/cart">
                 <div className="cart-logo">
                   <MdOutlineShoppingCart />
                 </div>
                 <div className="cart-num">
-                  <p>0</p>
+                  <p>{items.length}</p>
                 </div>
-              </div>
+              </Link>
             </div>
         </div>
 

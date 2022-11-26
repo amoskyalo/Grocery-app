@@ -6,6 +6,7 @@ import Nav from '../Desktop/Nav/Nav'
 import Footer from '../Desktop/Footer/Footer'
 import Shop from '../Desktop/Shop/Shop'
 import SingleProduct from '../Desktop/Shop/SingleProduct'
+import Cart from '../Desktop/Cart/Cart'
 
 //mobile UI
 import MobileLanding from '../Mobile/MobileLanding/MobileLanding'
@@ -21,6 +22,7 @@ const Navigator = () => {
             <Route path='/' element={<DesktopBody />}/>
             <Route path='/shop-products' element={<Shop />}/>
             <Route path='/shop-products/:id' element={<SingleProduct />}/>
+            <Route path='/cart' element={<Cart />}/>
         </Routes>
         <Footer />
         </div>
